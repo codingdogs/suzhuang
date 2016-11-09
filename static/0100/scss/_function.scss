@@ -1,0 +1,61 @@
+$url:"http://icon.carimg.com/static/0200/";
+
+//transition
+@mixin tran($a:all, $b:ease, $c:.3s,$d:0s) {
+    transition: $a $b $c $d;
+    -moz-transition: $a $b $c $d;
+    -webkit-transition:$a $b $c $d;
+}
+
+//animation
+@mixin animation($a){
+	animation:$a;
+    -moz-animation:$a;
+    -webkit-animation:$a;
+       
+}
+
+//transform
+@mixin transform($a) {
+    transform: $a;
+    -moz-transform: $a;
+    -webkit-transform: $a;
+    -ms-transform: $a;
+}
+
+//opacity
+@mixin opacity($a) {
+    opacity: $a;
+    filter:alpha(opacity=$a*100);
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.no_select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.box_css3 {
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+}
+@mixin line_over($num:2) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $num;
+}

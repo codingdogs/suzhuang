@@ -1,0 +1,8 @@
+//lazyload
+.lazy {
+	position: relative; overflow: hidden; background: url(#{$url}loading.gif) center center no-repeat; background-color: #fff; -webkit-transform: rotateZ(0);
+	&.empty_img{background:url(#{$url}empty.gif) no-repeat center #f1f1f1;}
+	img.lazy_img {background: none;position: absolute;}
+}
+img.lazy_img {background: url(#{$url}loading.gif) center center no-repeat; background-color: #fff;}
+.auto_height{height:500px;background: url(#{$url}loading.gif) center center no-repeat; background-color: #fff; }

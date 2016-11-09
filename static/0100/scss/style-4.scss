@@ -1,0 +1,170 @@
+@import "_function";
+@import "_color";
+.right_around {
+    width: 280px;
+    float: right;
+}
+.b_detaile{
+    .product_cont{
+        padding-bottom:40px;
+        //导航栏
+        .here{
+            line-height: 40px;
+            a{
+                font-family: "微软雅黑";
+                font-size: 12px;
+            }
+        }
+        .content{
+            .le_cont{
+                width: 900px;
+                //cont1标题信息部分
+                .cont1{
+                    padding: 20px;
+                    border: 1px solid #e9e9e9;
+                    //左侧图片
+                    .img_box{
+                        width: 320px;
+                        .jqzoom{
+                            position: relative;
+                            padding: 0;
+                            height: 240px;
+                            overflow: hidden;
+                        }
+                        .simg_box{
+                            width: 340px;
+                            overflow: hidden;
+                            p{
+                                width: 56px;
+                                height: 42px;
+                                margin-right: 8px;
+                                cursor: pointer;
+                                border: 1px solid #fff;
+                                overflow: hidden;
+                                //&:hover{
+                                //    border-color: #ff4048;
+                                //}
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .active{
+                                    border-color: #ff4048;
+                            }
+                        }
+                    }
+                    //右侧文字
+                    .txt_box{
+                        width: 480px;
+                        margin-left: 27px;
+                        .item_name{
+                            margin-bottom: 12px;
+                            h1.f20{
+                                //height: 40px;
+                                line-height: 40px;
+                                display: block;
+                                
+                            }
+                        }
+                        .bg_pink{
+                            height: 100px;
+                            background: #fdf5f6;
+                            margin-bottom: 48px;
+                            overflow: hidden;
+                            .bg_pic{
+                                background-image: url(#{$url}bg_pic10.png);
+                                //opacity:0.1;
+                                //filter:"alpha(opacity=10)";
+                                //-ms-filter:"alpha(opacity=10)"; /* 旧版IE */
+                                height: 100px;
+                                padding: 30px 13px 0 20px;
+                                .price{
+                                    color: #666666;
+                                    .f20{
+                                        height: 40px;
+                                        line-height: 40px;
+                                        margin-left: 36px;
+                                    }
+                                }
+                                .hint{
+                                    margin-top: 16px;
+                                    padding-top: 10px;
+                                    color: #999999;
+                                    border-top: 1px dashed #ffe7ea;
+                                }
+                            }
+                        }
+                        .buttom{
+                            height: 40px;
+                            margin-bottom: 9px;
+                            .btn-red{
+                                height: 100%;
+                                width: 150px;
+                                text-align: center;
+                                line-height: 40px;
+                                background: #ff4d55;
+                                &:hover{
+                                    background: #e62626;
+                                }
+                            }
+                        }
+                        .hint{
+                            color: #999999;
+                            font: 12px "微软雅黑";
+                        }
+                    }
+                }
+                //产品信息
+                .cont2{
+                    border: 1px solid #e9e9e9;
+                    margin-bottom: 70px;
+                    .pro_title{
+                        height: 38px;
+                        line-height: 38px;
+                        background: #e9e9e9;
+                        border: 1px solid #e9e9e9;
+                        p.f18{
+                            margin-top: -2px;
+                            margin-left: -1px;
+                            padding: 0 14px;
+                            background: #ffffff;
+                            color: #ff4d55;
+                            border: 1px solid #e9e9e9;
+                            border-left: 0;
+                            border-right: 0;
+                            border-bottom: 2px solid #ff4d55;
+                        }
+                        .triangle{
+                            width: 0;
+                            height: 0;
+                            border-left: 2px solid transparent;
+                            border-right: 2px solid transparent;
+                            border-bottom: 4px solid #ff4d55;
+                            position: relative;
+                            left: 48px;
+                            top: 34px;
+                        }
+                    }
+                    //产品图片content
+                    .img{
+                        margin-top: 10px;
+                        margin-bottom: 22px;
+                        margin-left: 20px;
+                        width: 860px;
+                        overflow: hidden;
+                        img{
+                            display: block;
+                            max-width: 100%;
+                            margin: 0 auto;
+                            margin-top: 20px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+            //右边模块
+
+        }
+    }
+}
