@@ -1,27 +1,35 @@
 @import '_color';
 @import '_function';
-img.lazy_img{
+
+img.lazy_img {
     background-color: transparent;
 }
-div.lazy{
+
+div.lazy {
     background-color: transparent;
 }
-.full{
+
+.full {
     width: 100%;
     height: 100%;
 }
+
 body {
     min-width: 1170px;
 }
-em.titles i{
+
+em.titles i {
     color: #878787;
 }
-em.titles.title2{
+
+em.titles.title2 {
     color: #fff;
-    i{
+
+    i {
         color: #a9a9a9;
     }
 }
+
 .full {
     width: 100%;
     height: 100%;
@@ -30,6 +38,7 @@ em.titles.title2{
 .page-1 {
     min-width: 1170px;
     margin: 0 auto;
+
     div.swiper1 {
         width: 100%;
         height: 800px;
@@ -418,27 +427,29 @@ em.titles.title2{
                 margin: 0 auto;
             }
         }
-
-
     }
 }
-body.page-1-2{
+
+body.page-1-2 {
     .page7 {
         background-color: #2a2a2a;
         position: relative;
         height: 514px;
         overflow: hidden;
-        img.bg{
+
+        img.bg {
             position: absolute;
-            left:50%;
-            top:0;
+            left: 50%;
+            top: 0;
             margin-left: -800px;
             height: 514px;
         }
-        div.w1170{
+
+        div.w1170 {
             position: relative;
             z-index: 3;
         }
+
         em.titles {
             span {
                 color: #fff;
@@ -473,7 +484,8 @@ body.page-1-2{
                     white-space: nowrap;
                 }
 
-                input,select {
+                input,
+                select {
                     box-sizing: border-box;
                     display: block;
                     width: 100%;
@@ -481,7 +493,6 @@ body.page-1-2{
                     text-indent: 1em;
                     border-radius: 0;
                 }
-
             }
 
             button {
@@ -498,85 +509,79 @@ body.page-1-2{
         }
     }
 }
-body.page-2 {
-    div.page-header{
-        margin-top:70px;
-        position: relative;
-        height: 40px;
-        overflow: hidden;
+div.page-header {
+    margin-top: 70px;
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    i.bg {
         position: absolute;
-        z-index: 10;
-        left:0;
-        top:0;
-        width: 100%;
-        i.bg{
-            position: absolute;
-            left:0;
-            top:0;
-            background-color: #fff;
-            @include opacity(0.2);
-        }
-        div.w1170{
-            position: relative;
-            z-index: 1;
-            div.fl{
-                line-height: 40px;
-                a{
-                    color: #fff;
-                    @include tran;
-                    margin-right:30px;
-                    &:hover{
-                        @extend .on;
-                    }
-                    &.on{
-                        color: $color_logo;
-                    }
-                }
-            }
-            div.fr{
-                a{
-                    display: block;
-                    background-color: $color_logo;
-                    border-radius: 3px;
-                    color: #fff;
-                    font-size: 12px;
-                    padding:6px 15px;
-                    line-height: 1em;
-                    margin-top:7px;
-                    @include tran;
-                    &:hover{
-                        @include opacity(0.8);
-
-                    }
-                }
-            }
-        }
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        @include opacity(0.2);
     }
-    div.page2{
-        div.fonts{
-            position: absolute;
-            z-index: 10;
-            width: 100%;
-            top:400px;
-            left:95px;
-            width: 1000px;
-            p{
-                float: left;
-                width: 33%;
-                text-align: center;
+
+    div.w1170 {
+        position: relative;
+        z-index: 1;
+
+        div.fl {
+            line-height: 40px;
+
+            a {
                 color: #fff;
+                @include tran;
+                margin-right: 30px;
 
+                &:hover {
+                    @extend .on;
+                }
 
+                &.on {
+                    color: $color_logo;
+                }
+            }
+        }
+
+        div.fr {
+            a {
+                display: block;
+                background-color: $color_logo;
+                border-radius: 3px;
+                color: #fff;
+                font-size: 12px;
+                padding: 6px 15px;
+                line-height: 1em;
+                margin-top: 7px;
+                @include tran;
+
+                &:hover {
+                    @include opacity(0.8);
+                }
             }
         }
     }
-    .go-form{
+}
+body.page-2 {
+
+
+    .go-form {
         cursor: pointer;
     }
+
     div.banner {
         background-color: #000;
         height: 800px;
         position: relative;
+        width: 100%;
+        overflow: hidden;
 
         img {
             position: absolute;
@@ -586,10 +591,11 @@ body.page-2 {
             display: block;
             height: 800px;
             background: none;
-            &.banner-top{
-                height: 319px;
-                margin-left:-239px;
-                top:287px;
+
+            &.banner-top {
+                height: 334px;
+                margin-left: -240px;
+                top: 287px;
             }
         }
 
@@ -619,6 +625,7 @@ body.page-2 {
         background-color: #f7f7f7;
         overflow: hidden;
         padding-bottom: 70px;
+
         ul.swiper-btns {
             position: relative;
             height: 50px;
@@ -666,7 +673,7 @@ body.page-2 {
                 bottom: -1px;
                 left: 0;
                 display: block;
-                @include  tran;
+                @include tran;
             }
 
             &:after {
@@ -691,64 +698,90 @@ body.page-2 {
                 display: block;
                 width: 1170px;
                 height: 450px;
-                img{
+
+                img {
                     display: none;
                 }
             }
-            .swiper-slide-active{
-                a.lazy{
-                    img{
+
+            .swiper-slide-active {
+                a.lazy {
+                    img {
                         display: block;
                     }
                 }
             }
         }
     }
-    div.page2{
+
+    div.page2 {
         background-color: #35b099;
-        div.w1170{
-            height: 527px;
+        height: 527px;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        img {
+            position: absolute;
+            height: 100%;
+            background-color: transparent;
+            top: 0;
+            left: 50%;
+            margin-left: -800px;
+        }
+
+        div.w1170 {
             position: relative;
-            img{
-                position: absolute;
-                height: 100%;
-                background-color: transparent;
-                top:0;
-                left:50%;
-                margin-left:-800px;
+            z-index: 1;
+            overflow: hidden;
+            div.fonts {
+                margin:0 auto;
+                margin-top: 400px;
+                width: 1000px;
+                p {
+                    float: left;
+                    width: 33%;
+                    text-align: center;
+                    color: #fff;
+                }
             }
         }
     }
-    div.page3{
+
+    div.page3 {
         background-color: #fff;
         overflow: hidden;
     }
-    div.page4{
+
+    div.page4 {
         background-color: #0c0c0c;
         position: relative;
-        height:705px;
+        height: 705px;
         overflow: hidden;
-        img.bg{
+
+        img.bg {
             position: absolute;
             height: 705px;
-            left:50%;
-            top:0;
-            margin-left:-800px;
+            left: 50%;
+            top: 0;
+            margin-left: -800px;
             background-color: transparent;
         }
-        div.w1170{
+
+        div.w1170 {
             position: relative;
             z-index: 3;
-            div.swiper-body{
+
+            div.swiper-body {
                 position: relative;
                 width: 1030px;
-                margin:0 auto;
-                i.icons{
+                margin: 0 auto;
+
+                i.icons {
                     position: absolute;
                     display: block;
-                    top:50%;
-                    margin-top:-36px;
-                    border:1px solid #fff;
+                    top: 50%;
+                    margin-top: -36px;
+                    border: 2px solid #fff;
                     opacity: 0.6;
                     width: 70px;
                     height: 70px;
@@ -756,151 +789,246 @@ body.page-2 {
                     text-align: center;
                     line-height: 70px;
                     font-size: 50px;
-                    right:100%;
+                    right: 100%;
                     color: #fff;
                     opacity: 0.6;
                     cursor: pointer;
-                    &.icon-right{
-                        left:100%;
+
+                    &.icon-right {
+                        left: 100%;
                     }
                 }
             }
-            div.swiper2{
+
+            div.swiper2 {
                 width: 970px;
                 height: 420px;
-                margin:50px auto;
+                margin: 50px auto;
                 position: relative;
 
-                div.swiper-slide{
+                div.swiper-slide {
                     position: relative;
                     background-color: #1f1f1f;
                     overflow: hidden;
-                    img{
+
+                    img {
                         display: none;
                     }
-                    &.swiper-slide-active{
-                        img{
+
+                    &.swiper-slide-active {
+                        img {
                             display: block;
                         }
-                        div.top{
-                            div.left{
-                                left:0;
+
+                        div.top {
+                            div.left {
+                                left: 0;
                             }
-                            div.right{
-                                div.lazy{
+
+                            div.right {
+                                div.lazy {
                                     @include transform(translate(0,0));
                                 }
                             }
                         }
                     }
-                    div.top{
+
+                    div.top {
                         position: absolute;
-                        left:0;
-                        top:0;
+                        left: 0;
+                        top: 0;
                         z-index: 10;
-                        div.left{
+
+                        div.left {
                             width: 270px;
-                            position:absolute;
+                            position: absolute;
                             height: 100%;
                             overflow: hidden;
-                            top:0;
-                            left:-300px;
+                            top: 0;
+                            left: -300px;
                             @include tran($c:0.5s,$d:0.4s);
-                            div.lazy{
+
+                            div.lazy {
                                 width: 200px;
                                 height: 140px;
                                 background-color: #fff;
-                                border:1px solid #e9e9e9;
-                                margin:60px auto;
-                                margin-bottom:20px;
+                                border: 1px solid #e9e9e9;
+                                margin: 60px auto 20px;
                             }
-                            div.fonts{
+
+                            div.fonts {
                                 width: 200px;
                                 overflow-y: auto;
                                 color: #666;
                                 height: 180px;
-                                margin:0 auto;
+                                margin: 0 auto;
                                 font-size: 12px;
                             }
-                            &:after{
+
+                            &:after {
                                 width: 100%;
                                 height: 100%;
                                 background-color: #fff;
                                 opacity: 0.8;
                                 content: '';
-                                left:0;
-                                top:0;
+                                left: 0;
+                                top: 0;
                                 position: absolute;
                                 z-index: -1;
                             }
                         }
-                        div.right{
+
+                        div.right {
                             position: absolute;
-                            bottom:0;
-                            left:270px;
-                            right:0;
+                            bottom: 0;
+                            left: 270px;
+                            right: 0;
                             height: 150px;
                             text-align: center;
                             font-size: 0;
                             overflow: hidden;
-                            div.lazy{
+
+                            div.lazy {
                                 display: inline-block;
                                 width: 130px;
                                 height: 110px;
-                                margin:0 20px;
-                                border:6px solid #fff;
+                                margin: 0 20px;
+                                border: 6px solid #fff;
                                 @include transform(translate(0,150%));
                                 @include tran($c:0.5s,$d:0.5s);
-                                &:nth-of-type(2){
+
+                                &:nth-of-type(2) {
                                     @include tran($c:0.5s,$d:0.6s);
                                 }
-                                &:nth-of-type(3){
+
+                                &:nth-of-type(3) {
                                     @include tran($c:0.5s,$d:0.7s);
                                 }
                             }
                         }
                     }
                 }
-
             }
         }
     }
-    div.page7{
+
+    div.page7 {
         overflow: hidden;
-        span.xin{
+
+        span.xin {
             opacity: 0.3;
         }
-        button{
-            margin-top:0px;
-        }
-        div.input{
 
+        button {
+            margin-top: 0;
+        }
+
+        div.input {
             background-color: #fff;
             display: block;
-            margin:16px auto;
-            input,select{
+            margin: 16px auto;
+
+            input,
+            select {
                 font-size: 14px;
-
-
             }
 
-            div.error{
-                left:390px;
-                top:0;
+            div.error {
+                left: 390px;
+                top: 0;
             }
         }
     }
 }
-div.input input{
+body.page-3{
+    div.banner{
+        background-color: #050505;
+        height: 800px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            height: 800px;
+            top:0;
+            margin-left:-800px;
+            left:50%;
+            width: 1600px;
+        }
+    }
+    div.pages{
+        background-color: #f7f7f7;
+        overflow: hidden;
+        position: relative;
+        .swiper2{
+            background-color: #fff;
+        }
+        &.odd{
+            background-color: #fff;
+            .swiper2{
+                background-color: #f7f7f7;
+            }
+        }
+    }
+    div.swiper1{
+        width: 100%;
+        height: 360px;
+        overflow: hidden;
+        margin: 30px auto;
+        div.left{
+            float: left;
+            width: 516px;
+            height: 360px;
+        }
+        div.swiper2{
+            float: right;
+            width: 635px;
+            height: 360px;
+
+            div.swiper-slide{
+                width: 210px;
+                border-right:1px solid #fff;
+                height: 360px;
+                position: relative;
+                div.lazy{
+                    width: 100%;
+                    height: 275px;
+                }
+                div.fonts{
+                    position: absolute;
+                    bottom:10px;
+                    overflow: hidden;
+                    left:10px;
+                    right:10px;
+                    top:285px;
+                    em{
+
+                        color: #333;
+                        font-size: 14px;
+                    }
+                    span{
+                        display: block;
+                        color: #666;
+                        font-size:12px;
+                    }
+                }
+            }
+        }
+    }
+}
+div.input input {
     @include tran;
-    &:focus{
-        border-color:$color_logo;
+
+    &:focus {
+        border-color: $color_logo;
         box-shadow: 2px 1px 6px $color_logo;
     }
 }
-select{
-    border:none;
+
+select {
+    border: none;
 }
+
 .pagination,
 .pagination1 {
     position: absolute;
