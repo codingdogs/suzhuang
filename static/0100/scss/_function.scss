@@ -1,4 +1,5 @@
 $url:"http://icon.carimg.com/static/0200/";
+$url1:"../img/";
 
 //transition
 @mixin tran($a:all, $b:ease, $c:.3s,$d:0s) {
@@ -12,7 +13,7 @@ $url:"http://icon.carimg.com/static/0200/";
 	animation:$a;
     -moz-animation:$a;
     -webkit-animation:$a;
-       
+
 }
 
 //transform

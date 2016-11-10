@@ -30,7 +30,6 @@ em.titles.title2{
 .page-1 {
     min-width: 1170px;
     margin: 0 auto;
-
     div.swiper1 {
         width: 100%;
         height: 800px;
@@ -428,6 +427,7 @@ body.page-1-2{
         background-color: #2a2a2a;
         position: relative;
         height: 514px;
+        overflow: hidden;
         img.bg{
             position: absolute;
             left:50%;
@@ -499,6 +499,59 @@ body.page-1-2{
     }
 }
 body.page-2 {
+    div.page-header{
+        margin-top:70px;
+        position: relative;
+        height: 40px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 10;
+        left:0;
+        top:0;
+        width: 100%;
+        i.bg{
+            position: absolute;
+            left:0;
+            top:0;
+            background-color: #fff;
+            @include opacity(0.2);
+        }
+        div.w1170{
+            position: relative;
+            z-index: 1;
+            div.fl{
+                line-height: 40px;
+                a{
+                    color: #fff;
+                    @include tran;
+                    margin-right:30px;
+                    &:hover{
+                        @extend .on;
+                    }
+                    &.on{
+                        color: $color_logo;
+                    }
+                }
+            }
+            div.fr{
+                a{
+                    display: block;
+                    background-color: $color_logo;
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 12px;
+                    padding:6px 15px;
+                    line-height: 1em;
+                    margin-top:7px;
+                    @include tran;
+                    &:hover{
+                        @include opacity(0.8);
+
+                    }
+                }
+            }
+        }
+    }
     .go-form{
         cursor: pointer;
     }
@@ -515,6 +568,11 @@ body.page-2 {
             display: block;
             height: 800px;
             background: none;
+            &.banner-top{
+                height: 319px;
+                margin-left:-239px;
+                top:287px;
+            }
         }
 
         a {
@@ -790,6 +848,7 @@ body.page-2 {
         }
     }
     div.page7{
+        overflow: hidden;
         span.xin{
             opacity: 0.3;
         }
@@ -803,6 +862,8 @@ body.page-2 {
             margin:16px auto;
             input,select{
                 font-size: 14px;
+
+
             }
 
             div.error{
@@ -810,6 +871,13 @@ body.page-2 {
                 top:0;
             }
         }
+    }
+}
+div.input input{
+    @include tran;
+    &:focus{
+        border-color:$color_logo;
+        box-shadow: 2px 1px 6px $color_logo;
     }
 }
 select{

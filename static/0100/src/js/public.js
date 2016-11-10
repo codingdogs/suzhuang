@@ -3,6 +3,7 @@ var jiajuol = {
 
 
     //百度分享
+
     share: function() {
         window._bd_share_config = {
             "common": {
@@ -880,4 +881,13 @@ $(function(){
             location='http://service.jiajuol.com/login'
         }
     });
+})
+$(function(){
+    setInterval(function(){
+        if($(window).scrollTop()>100){
+            $('#header i.bg').addClass('on');
+        }else{
+            $('#header i.bg').removeClass('on');
+        }
+    },500)
 })
