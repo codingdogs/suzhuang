@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>速装美装</title>
+		<meta name="keywords" content="速装美装">
+		<meta name="description" content="速装美装">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit">
+		<link rel="stylesheet" type="text/css" href="css/public.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style-3.min.css" />
+		<link rel="stylesheet" href="../common/swiper2/idangerous.swiper.css">
+	</head>
+
+	<body class="daigou">
+		<div class="daigou">
+			
+			<div class="box1">
+				<div class="w1170 pr">
+					<div class="pa">
+						<p class="name text-center">申请底价</p>
+						<form class="new_shi_form" method="post" id="yuyue" action="http://www.jiajuol.com/api/0200/crm_apply.php">
+							<input type="hidden" name="enter_type" value="8">
+							<input type="hidden" name="resource" value="2">
+                            <input type="hidden" name="special_id" value="71">
+                            <input type="hidden" name="des"  value="" id='des'>
+                            <input type="hidden" name="enter_url"  value="" id='enter_url'>
+							<input type="hidden" name="userid" id="pc_userid" value="0">
+							<div class="input">
+								<input type="text" name="name" value="" class='name' validate="required" placeholder="商品名称">
+								
+								<input type="tel" name="phone" value="" class='tel' validate="required|phone" placeholder="商品价格">
+								
+								<input type="text" name="shopInfo" value="" class='name' validate="required" placeholder="您的称呼">
+								<input type="text" name="shopPrice" value="" class='name' validate="required|number" placeholder="您的电话">
+
+								<button class="btn fl f18" type="submit" disabled="disabled">咨询底价</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="../common/jquery-1.9.1.min.js"></script>
+		<script src="../common/swiper2/idangerous.swiper.min.js" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+
+</html>
