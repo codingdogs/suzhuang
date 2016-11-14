@@ -22,18 +22,20 @@
             <div class="pages">
                 <div class="page1">
                     <div class="w1170">
-
                         <em class="titles">
                             <span>全屋空间配置 主材一价全包</span>
                             <i>全系一线主材，更好更齐全的主材配置方案，更优主材更低价格</i>
                         </em>
-                        <i class="iconfont icon-27kongxintaoxin xin"></i>
+                        <span class="xin">
+                            <i class="iconfont icon-27kongxintaoxin"></i>
+                        </span>
                         <ul class="swiper-btns">
                             <li class="on">客餐厅</li>
                             <li>卧室</li>
                             <li>厨房</li>
                             <li>卫生间</li>
                             <li>阳台</li>
+                            <i></i>
                         </ul>
                         <div class="swiper-container swiper1">
                             <div class="swiper-wrapper">
@@ -57,6 +59,11 @@
                                         <img data-original='http://i.carimg.com/store/202/006/000/87757b2b9f280818.jpg!c' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img auto"/>
                                     </a>
                                 </div>
+								<div class="swiper-slide">
+			                        <a  class="lazy" style="background-color:#a56238;">
+			                            <img data-original='http://i.carimg.com/store/431/013/000/96057e2526c10609.jpg!c' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img auto"/>
+			                        </a>
+			                    </div>
                             </div>
                         </div>
                     </div>
@@ -70,16 +77,70 @@
             $(function() {
                 var swiper1 = new Swiper('.swiper1', {
                     loop: true,
-                    speed: 1000,
+                    speed: 800,
                     paginationClickable: true,
                     onSwiperCreated: function() {
                         $(window).scroll();
                     },
-                    onSlideChangeEnd: function() {
+                    onSlideChangeStart: function(swiper) {
+						console.log(swiper);
                         $(window).scroll();
+						var $this=$swiper_btn.eq(swiper.activeLoopIndex)
+						$this.addClass('on').siblings().removeClass('on');
+                        $swiper_i.css({
+                            left: swiper.activeLoopIndex*20 + '%'
+                        });
+						var now_swiper = $('.swiper1 .swiper-slide-active');
+                        if (now_swiper.next().length) {
+                            now_swiper.next().find('img').show();
+                        } else {
+                            now_swiper.eq(0).find('img').show();
+                        }
+                        if (now_swiper.prev().length) {
+                            now_swiper.prev().find('img').show();
+                        } else {
+                            now_swiper.last().find('img').show();
+                        }
+
+                    },
+                    progress: true,
+                    onProgressChange: function(swiper) {
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            var slide = swiper.slides[i];
+                            var progress = slide.progress;
+                            var translate,
+                                boxShadow;
+                            if (progress > 0) {
+                                translate = progress * swiper.width;
+                                boxShadowOpacity = 0;
+                            } else {
+                                translate = 0;
+                                boxShadowOpacity = 1 - Math.min(Math.abs(progress), 1);
+                            }
+                            slide.style.boxShadow = '0px 0px 10px rgba(0,0,0,' + boxShadowOpacity + ')';
+                            swiper.setTransform(slide, 'translate3d(' + (translate) + 'px,0,0)');
+                        }
+                    },
+                    onTouchStart: function(swiper) {
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.setTransition(swiper.slides[i], 0);
+                        }
+                    },
+                    onSetWrapperTransition: function(swiper, speed) {
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.setTransition(swiper.slides[i], speed);
+                        }
                     }
-                })
-            })
+                });
+                var $swiper_btn = $('.swiper-btns li');
+                var $swiper_i = $('.swiper-btns i');
+                $swiper_btn.each(function(index, obj) {
+                    $(obj).click(function() {
+                        swiper1.swipeTo(index);
+
+                    });
+                });
+            });
         </script>
 
     </body>

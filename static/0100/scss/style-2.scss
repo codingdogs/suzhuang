@@ -1,7 +1,8 @@
 @import '_color';
 @import '_function';
+
 body {
-    min-width: 1200px;
+    min-width: 1170px;
 }
 
 .full {
@@ -10,7 +11,7 @@ body {
 }
 
 .page-1 {
-    min-width: 1200px;
+    min-width: 1170px;
     margin: 0 auto;
 
     div.swiper1 {
@@ -44,8 +45,6 @@ body {
         }
     }
 
-
-
     div.content-page {
         .page1 {
             background-color: #f7f7f7;
@@ -74,10 +73,10 @@ body {
 
             div.hovers {
                 margin-top: 80px;
+                width: 1235px;
 
                 div.hovers-list {
                     overflow: hidden;
-                    width: 1235px;
                     float: left;
                     width: 270px;
                     height: 300px;
@@ -214,6 +213,7 @@ body {
             div.swiper2 {
                 margin-bottom: 30px;
                 height: 260px;
+                width: 100%;
 
                 .pagination1 {
                     bottom: 0;
@@ -228,20 +228,20 @@ body {
                     background-color: #35bda3;
                     border-color: #35bda3;
                 }
-                width: 1200px;
+                width: 100%;
 
                 div.swiper-slide {
                     height: 230px;
                 }
 
                 div.a-body {
-                    width: 1230px;
+                    width: 1200px;
                     overflow: hidden;
                 }
 
                 a {
                     float: left;
-                    margin-right: 21px;
+                    margin-right: 15px;
                     border: 1px solid #c7c7c7;
                     width: 180px;
                     height: 220px;
@@ -278,21 +278,26 @@ body {
                 }
             }
         }
-        .page5{
+
+        .page5 {
             background-color: #040404;
             overflow: hidden;
-            em.titles{
+
+            em.titles {
                 color: #fff;
-                i{
+
+                i {
                     color: #a9a9a9;
                 }
             }
-            div.qin{
-                margin:60px 0;
+
+            div.qin {
+                margin: 60px 0;
                 overflow: hidden;
                 height: 410px;
                 position: relative;
-                div.qin-list{
+
+                div.qin-list {
                     position: relative;
                     width: 70px;
                     @include tran($b:linear);
@@ -301,163 +306,180 @@ body {
                     background-color: rgba(244,111,70,0.8);
                     float: left;
                     overflow: hidden;
-                    &.even{
+
+                    &.even {
                         background-color: #4ab49f;
                         background-color: rgba(74,180,159,0.8);
                     }
-                    &.on{
-                        width: 840px;
-                        div.qin-title{
+
+                    &.on {
+                        width: 820px;
+
+                        div.qin-title {
                             opacity: 0;
-                            top:100%;
+                            top: 100%;
                         }
-                        div.qin-left{
+
+                        div.qin-left {
                             opacity: 1;
                         }
                     }
                 }
-                div.qin-left{
+
+                div.qin-left {
                     overflow: hidden;
                     text-align: center;
                     position: relative;
                     width: 760px;
-                    height:370px;
-                    padding:40px;
+                    height: 370px;
+                    padding: 40px;
                     color: #fff;
                     opacity: 0;
                     overflow-y: auto;
                     @include tran($d:0.3s);
-                    em{
+
+                    em {
                         display: block;
                         font-size: 30px;
-                        margin-bottom:25px;
+                        margin-bottom: 25px;
                     }
-                    span{
-                        display: block;
-                        font-size:14px;
-                    }
-                    div{
 
-                            margin-top:30px;
-                        i{
+                    span {
+                        display: block;
+                        font-size: 14px;
+                    }
+
+                    div {
+                        margin-top: 30px;
+
+                        i {
                             float: left;
                             text-align: left;
                             width: 150px;
                             height: 30px;
                             line-height: 30px;
                             font-size: 12px;
-                            padding:0 10px;
+                            padding: 0 10px;
                             @extend .ellipsis;
                             background-color: rgba(0,0,0,0.08);
-                            margin-right:16px;
-                            margin-bottom:5px;
+                            margin-right: 16px;
+                            margin-bottom: 5px;
                         }
                     }
-
                 }
-                div.qin-title{
+
+                div.qin-title {
                     position: absolute;
                     width: 70px;
                     height: 100%;
                     color: #f8f8f8;
                     font-size: 20px;
                     overflow: hidden;
-                    writing-mode:tb-rl ;
+                    writing-mode: tb-rl;
                     text-align: center;
                     cursor: pointer;
-                    right:17px;
-                    top:0;
-
+                    right: 17px;
+                    top: 0;
                     @include tran($d:0.3s);
-                    i{
+
+                    i {
                         display: inline-block;
                         font-size: 24px;
-                        writing-mode:lr-tb ;
-
-
+                        writing-mode: lr-tb;
                     }
                 }
             }
         }
-        .page6{
-            padding-bottom:100px;
-            i.xin:before{
+
+        .page6 {
+            padding-bottom: 100px;
+
+            i.xin:before {
                 background-color: #fff;
             }
-            img{
-                margin:0 auto;
+
+            img {
+                margin: 0 auto;
             }
         }
-        .page7{
+
+        .page7 {
             background-color: #2a2a2a;
-            em.titles{
-                span{
+
+            em.titles {
+                span {
                     color: #fff;
                 }
-                i{
+
+                i {
                     color: #aaaaaa;
                 }
             }
-            form{
+
+            form {
                 display: block;
                 text-align: center;
                 overflow: hidden;
                 padding-bottom: 70px;
-                div.input{
+
+                div.input {
                     display: inline-block;
                     width: 370px;
                     height: 50px;
                     font-size: 14px;
-                     margin:0 15px;
-                     margin-top:65px;
-                     position: relative;
-                     div.error{
-                         position: absolute;
-                         top:100%;
-                         left:0;
-                         line-height: 30px;
-                         display: block;
-                         margin-top: 15px;
-                     }
-                     input{
-                         display: block;
-                         width: 100%;
-                         height: 100%;
-                         text-indent: 1em;
-                     }
+                    margin: 65px 15px 0;
+                    position: relative;
+
+                    div.error {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        line-height: 30px;
+                        display: block;
+                        margin-top: 15px;
+                    }
+
+                    input {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        text-indent: 1em;
+                    }
                 }
-                button{
-                    margin-top:65px;
+
+                button {
+                    margin-top: 65px;
                     width: 370px;
                     font-size: 14px;
                     text-align: center;
                     line-height: 50px;
-                    border:1px solid #3cd8b9;
+                    border: 1px solid #3cd8b9;
                     color: #3cd8b9;
                     background-color: transparent;
                     cursor: pointer;
                 }
             }
-
         }
     }
 }
-body.page-2{
-    div.banner{
+
+body.page-2 {
+    div.banner {
         background-color: #000;
         height: 800px;
         position: relative;
 
-        img{
+        img {
             position: absolute;
-            left:50%;
-            margin-left:-800px;
-            top:0;
+            left: 50%;
+            margin-left: -800px;
+            top: 0;
             display: block;
             height: 800px;
             background: none;
         }
-        a{
+
+        a {
             display: block;
             position: absolute;
             width: 110px;
@@ -467,42 +489,109 @@ body.page-2{
             text-align: center;
             line-height: 30px;
             font-size: 14px;
-            left:50%;
-            margin-left:-55px;
-            bottom:180px;
+            left: 50%;
+            margin-left: -55px;
+            bottom: 180px;
             @include tran;
-            &:hover{
+
+            &:hover {
                 background-color: #fff;
                 color: #1ea78d;
             }
         }
     }
-    div.page1{
+
+    div.page1 {
         background-color: #f7f7f7;
         overflow: hidden;
-        ul.swiper-btns{
-            li{
+
+        ul.swiper-btns {
+            position: relative;
+            height: 50px;
+            border-bottom: 1px solid #f0f0f0;
+
+            li {
                 float: left;
                 width: 20%;
                 position: relative;
                 height: 50px;
                 line-height: 50px;
-                color: #1ea78d;
+                text-align: center;
+                color: #666;
+                font-size: 14px;
+                @include tran;
+                @extend .no_select;
+                cursor: pointer;
 
+                &:hover {
+                    @extend .on;
+                }
+
+                &.on {
+                    color: #1ea78d;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    display: block;
+                    height: 14px;
+                    background-color: #b7ddd6;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -7px;
+                }
+            }
+
+            i {
+                position: absolute;
+                width: 20%;
+                height: 2px;
+                background-color: #1ea78d;
+                bottom: -1px;
+                left: 0;
+                display: block;
+                @include  tran;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                display: block;
+                height: 20px;
+                background-color: #f7f7f7;
+                right: 0;
+                top: 50%;
+                margin-top: -7px;
             }
         }
-        div.swiper1{
-            width: 1200px;
+
+        div.swiper1 {
+            width: 100%;
             height: 450px;
             overflow: hidden;
-            a.lazy{
+
+            a.lazy {
                 display: block;
                 width: 1200px;
                 height: 450px;
+                img{
+                    display: none;
+                }
+            }
+            .swiper-slide-active{
+                a.lazy{
+                    img{
+                        display: block;
+                    }
+                }
             }
         }
     }
 }
+
 .pagination,
 .pagination1 {
     position: absolute;
