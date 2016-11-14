@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>速装美装</title>
+        <meta name="keywords" content="速装美装">
+        <meta name="description" content="速装美装">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="renderer" content="webkit">
+        <link rel="stylesheet" type="text/css" href="css/public.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style-2.min.css"/>
+        <link rel="stylesheet" href="../common/swiper2/idangerous.swiper.css">
+    </head>
+
+    <body class="page-2">
+        <div class="container">
+            <div class="banner">
+                <img data-original='img/page-2-banner.jpg' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img"/>
+                <a href="">立即预约</a>
+            </div>
+            <div class="pages">
+                <div class="page1">
+                    <div class="w1170">
+
+                        <em class="titles">
+                            <span>全屋空间配置 主材一价全包</span>
+                            <i>全系一线主材，更好更齐全的主材配置方案，更优主材更低价格</i>
+                        </em>
+                        <i class="iconfont icon-27kongxintaoxin xin"></i>
+                        <ul class="swiper-btns">
+                            <li class="on">客餐厅</li>
+                            <li>卧室</li>
+                            <li>厨房</li>
+                            <li>卫生间</li>
+                            <li>阳台</li>
+                        </ul>
+                        <div class="swiper-container swiper1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="lazy" style="background-color:#111212;">
+                                        <img data-original='img/banner.jpg' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img auto"/>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="lazy" style="background-color:#111212;">
+                                        <img data-original='http://i.carimg.com/store/284/045/000/63058180192a7177.jpg!c' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img auto"/>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="lazy" style="background-color:#c47242;">
+                                        <img data-original='http://i.carimg.com/store/199/006/000/16757b2b9be22028.jpg!c' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img auto"/>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a class="lazy" style="background-color:#7b3adc;">
+                                        <img data-original='http://i.carimg.com/store/202/006/000/87757b2b9f280818.jpg!c' src="http://icon.dyrs.cc/m/blank.gif" alt="" class="lazy_img auto"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../common/jquery-1.9.1.min.js"></script>
+        <script src="../common/swiper2/idangerous.swiper.min.js" charset="utf-8"></script>
+        <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            $(function() {
+                var swiper1 = new Swiper('.swiper1', {
+                    loop: true,
+                    speed: 1000,
+                    paginationClickable: true,
+                    onSwiperCreated: function() {
+                        $(window).scroll();
+                    },
+                    onSlideChangeEnd: function() {
+                        $(window).scroll();
+                    }
+                })
+            })
+        </script>
+
+    </body>
+
+</html>

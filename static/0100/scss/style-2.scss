@@ -1,6 +1,5 @@
 @import '_color';
 @import '_function';
-
 body {
     min-width: 1200px;
 }
@@ -443,7 +442,67 @@ body {
         }
     }
 }
+body.page-2{
+    div.banner{
+        background-color: #000;
+        height: 800px;
+        position: relative;
 
+        img{
+            position: absolute;
+            left:50%;
+            margin-left:-800px;
+            top:0;
+            display: block;
+            height: 800px;
+            background: none;
+        }
+        a{
+            display: block;
+            position: absolute;
+            width: 110px;
+            height: 30px;
+            color: #fff;
+            background-color: #1ea78d;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            left:50%;
+            margin-left:-55px;
+            bottom:180px;
+            @include tran;
+            &:hover{
+                background-color: #fff;
+                color: #1ea78d;
+            }
+        }
+    }
+    div.page1{
+        background-color: #f7f7f7;
+        overflow: hidden;
+        ul.swiper-btns{
+            li{
+                float: left;
+                width: 20%;
+                position: relative;
+                height: 50px;
+                line-height: 50px;
+                color: #1ea78d;
+
+            }
+        }
+        div.swiper1{
+            width: 1200px;
+            height: 450px;
+            overflow: hidden;
+            a.lazy{
+                display: block;
+                width: 1200px;
+                height: 450px;
+            }
+        }
+    }
+}
 .pagination,
 .pagination1 {
     position: absolute;
