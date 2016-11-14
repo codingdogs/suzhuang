@@ -10,7 +10,7 @@ $cf4: #f4f4f4;
 div.daigou{
     .box1{
         height: 800px;
-        background: url(../img/zhucaidaigou/banner.jpg) no-repeat center;
+        background: url(../img/zhucaidaigou/banner.jpg) #000 no-repeat center;
         div.pa{
             width: 300px;
             height: 400px;
@@ -46,5 +46,23 @@ div.daigou{
             }
         }
     }
-    
+    .box2{
+        margin-top: 58px;
+        border-bottom: 1px solid #eee;
+        div.clearfix{
+            margin: 24px 0 54px;
+        }
+        dl{
+            width: 20%;
+            dt{
+                font-size: 24px;
+                line-height: 1.5em;
+            }
+            dd{
+                font-size: 18px;
+                color: #1bbd9e;
+                line-height: 1.5em;
+            }
+        }
+    }
 }
