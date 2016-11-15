@@ -1,10 +1,27 @@
 @import '_color';
 @import '_function';
-
+img.lazy_img{
+    background-color: transparent;
+}
+div.lazy{
+    background-color: transparent;
+}
+.full{
+    width: 100%;
+    height: 100%;
+}
 body {
     min-width: 1170px;
 }
-
+em.titles i{
+    color: #878787;
+}
+em.titles.title2{
+    color: #fff;
+    i{
+        color: #a9a9a9;
+    }
+}
 .full {
     width: 100%;
     height: 100%;
@@ -403,67 +420,88 @@ body {
             }
         }
 
-        .page7 {
-            background-color: #2a2a2a;
 
-            em.titles {
-                span {
-                    color: #fff;
-                }
-
-                i {
-                    color: #aaaaaa;
-                }
+    }
+}
+body.page-1-2{
+    .page7 {
+        background-color: #2a2a2a;
+        position: relative;
+        height: 514px;
+        img.bg{
+            position: absolute;
+            left:50%;
+            top:0;
+            margin-left: -800px;
+            height: 514px;
+        }
+        div.w1170{
+            position: relative;
+            z-index: 3;
+        }
+        em.titles {
+            span {
+                color: #fff;
             }
 
-            form {
-                display: block;
+            i {
+                color: #aaaaaa;
+            }
+        }
+
+        form {
+            display: block;
+            text-align: center;
+            overflow: hidden;
+            padding-bottom: 70px;
+
+            div.input {
+                display: inline-block;
+                width: 370px;
+                height: 50px;
+                font-size: 14px;
+                margin: 65px 15px 0;
+                position: relative;
+
+                div.error {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    line-height: 30px;
+                    display: block;
+                    margin-top: 15px;
+                    white-space: nowrap;
+                }
+
+                input,select {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-indent: 1em;
+                    border-radius: 0;
+                }
+
+            }
+
+            button {
+                margin-top: 65px;
+                width: 370px;
+                font-size: 14px;
                 text-align: center;
-                overflow: hidden;
-                padding-bottom: 70px;
-
-                div.input {
-                    display: inline-block;
-                    width: 370px;
-                    height: 50px;
-                    font-size: 14px;
-                    margin: 65px 15px 0;
-                    position: relative;
-
-                    div.error {
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        line-height: 30px;
-                        display: block;
-                        margin-top: 15px;
-                    }
-
-                    input {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        text-indent: 1em;
-                    }
-                }
-
-                button {
-                    margin-top: 65px;
-                    width: 370px;
-                    font-size: 14px;
-                    text-align: center;
-                    line-height: 50px;
-                    border: 1px solid #3cd8b9;
-                    color: #3cd8b9;
-                    background-color: transparent;
-                    cursor: pointer;
-                }
+                line-height: 50px;
+                border: 1px solid #3cd8b9;
+                color: #3cd8b9;
+                background-color: transparent;
+                cursor: pointer;
             }
         }
     }
 }
-
 body.page-2 {
+    .go-form{
+        cursor: pointer;
+    }
     div.banner {
         background-color: #000;
         height: 800px;
@@ -504,7 +542,7 @@ body.page-2 {
     div.page1 {
         background-color: #f7f7f7;
         overflow: hidden;
-
+        padding-bottom: 70px;
         ul.swiper-btns {
             position: relative;
             height: 50px;
@@ -575,7 +613,7 @@ body.page-2 {
 
             a.lazy {
                 display: block;
-                width: 1200px;
+                width: 1170px;
                 height: 450px;
                 img{
                     display: none;
@@ -590,8 +628,193 @@ body.page-2 {
             }
         }
     }
-}
+    div.page2{
+        background-color: #35b099;
+        div.w1170{
+            height: 527px;
+            position: relative;
+            img{
+                position: absolute;
+                height: 100%;
+                background-color: transparent;
+                top:0;
+                left:50%;
+                margin-left:-800px;
+            }
+        }
+    }
+    div.page3{
+        background-color: #fff;
+        overflow: hidden;
+    }
+    div.page4{
+        background-color: #0c0c0c;
+        position: relative;
+        height:705px;
+        overflow: hidden;
+        img.bg{
+            position: absolute;
+            height: 705px;
+            left:50%;
+            top:0;
+            margin-left:-800px;
+            background-color: transparent;
+        }
+        div.w1170{
+            position: relative;
+            z-index: 3;
+            div.swiper-body{
+                position: relative;
+                width: 1030px;
+                margin:0 auto;
+                i.icons{
+                    position: absolute;
+                    display: block;
+                    top:50%;
+                    margin-top:-36px;
+                    border:1px solid #fff;
+                    opacity: 0.6;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 70px;
+                    font-size: 50px;
+                    right:100%;
+                    color: #fff;
+                    opacity: 0.6;
+                    cursor: pointer;
+                    &.icon-right{
+                        left:100%;
+                    }
+                }
+            }
+            div.swiper2{
+                width: 970px;
+                height: 420px;
+                margin:50px auto;
+                position: relative;
 
+                div.swiper-slide{
+                    position: relative;
+                    background-color: #1f1f1f;
+                    overflow: hidden;
+                    img{
+                        display: none;
+                    }
+                    &.swiper-slide-active{
+                        img{
+                            display: block;
+                        }
+                        div.top{
+                            div.left{
+                                left:0;
+                            }
+                            div.right{
+                                div.lazy{
+                                    @include transform(translate(0,0));
+                                }
+                            }
+                        }
+                    }
+                    div.top{
+                        position: absolute;
+                        left:0;
+                        top:0;
+                        z-index: 10;
+                        div.left{
+                            width: 270px;
+                            position:absolute;
+                            height: 100%;
+                            overflow: hidden;
+                            top:0;
+                            left:-300px;
+                            @include tran($c:0.5s,$d:0.4s);
+                            div.lazy{
+                                width: 200px;
+                                height: 140px;
+                                background-color: #fff;
+                                border:1px solid #e9e9e9;
+                                margin:60px auto;
+                                margin-bottom:20px;
+                            }
+                            div.fonts{
+                                width: 200px;
+                                overflow-y: auto;
+                                color: #666;
+                                height: 180px;
+                                margin:0 auto;
+                                font-size: 12px;
+                            }
+                            &:after{
+                                width: 100%;
+                                height: 100%;
+                                background-color: #fff;
+                                opacity: 0.8;
+                                content: '';
+                                left:0;
+                                top:0;
+                                position: absolute;
+                                z-index: -1;
+                            }
+                        }
+                        div.right{
+                            position: absolute;
+                            bottom:0;
+                            left:270px;
+                            right:0;
+                            height: 150px;
+                            text-align: center;
+                            font-size: 0;
+                            overflow: hidden;
+                            div.lazy{
+                                display: inline-block;
+                                width: 130px;
+                                height: 110px;
+                                margin:0 20px;
+                                border:6px solid #fff;
+                                @include transform(translate(0,150%));
+                                @include tran($c:0.5s,$d:0.5s);
+                                &:nth-of-type(2){
+                                    @include tran($c:0.5s,$d:0.6s);
+                                }
+                                &:nth-of-type(3){
+                                    @include tran($c:0.5s,$d:0.7s);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    div.page7{
+        span.xin{
+            opacity: 0.3;
+        }
+        button{
+            margin-top:0px;
+        }
+        div.input{
+
+            background-color: #fff;
+            display: block;
+            margin:16px auto;
+            input,select{
+                font-size: 14px;
+            }
+
+            div.error{
+                left:390px;
+                top:0;
+            }
+        }
+    }
+}
+select{
+    border:none;
+}
 .pagination,
 .pagination1 {
     position: absolute;
