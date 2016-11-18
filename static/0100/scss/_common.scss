@@ -119,3 +119,84 @@ span.xin {
         right: -90px;
     }
 }
+#footer{
+    //尾部
+    dl.f-links{
+        margin: 20px auto;
+        dt{
+           line-height: 30px;
+           margin-bottom: 5px;
+        }
+        dd a{
+            width: 68px;
+            margin-right: 10px;
+            display: block;
+            line-height: 25px;
+            float: left;
+        }
+    }
+    .cont{
+        background: #1b1b1b;
+        height: 226px;
+        padding-top: 74px;
+        color: #e2e2e2;
+        dl{
+            dd{
+                width: 150px;
+                line-height: 26px;
+                margin-bottom: 9px;
+                a{color: #e2e2e2;}
+            }
+        }
+        .weixin_pic{
+            margin-right: 20px;
+            &.weixin_pic2{
+                margin-left: 48px;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        div.number{
+            p.num1{
+                i{
+                    font-size: 26px;
+                }
+            }
+            p.num2{
+                color: #00ffcf;
+            }
+        }
+    }
+    .copyright{
+        margin-top: 45px;
+        color: $grey_6;
+    }
+}
+#operator{
+    //右侧悬浮
+    position: fixed;
+    left:50%;
+    margin-left: 585px;
+    width: 80px;
+    top: 50%;
+    li{
+        width: 80px;
+        height: 62px;
+        line-height: 62px;
+        background: #a0a0a0;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 1px;
+        &:hover{
+            background: #1b967f;
+        }
+        i.iconfont{
+            font-size: 32px;
+        }
+        &.top i.iconfont{
+            font-size: 26px;
+        }
+    }
+}
