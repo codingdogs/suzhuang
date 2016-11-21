@@ -944,7 +944,38 @@ body.page-2 {
 }
 
 body.page-3 {
+div.em-btns-body{
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:-15px;
+}
+div.em-btns{
+    display: inline-block;
+    border:1px solid $color_logo;
+    border-radius: 3px;
+    overflow: hidden;
+    a{
 
+        float: left;
+        width: 100px;
+        height:30px;
+        text-align: center;
+        line-height: 30px;
+        color: #666;
+        font-size: 12px;
+        border-right:1px solid $color_logo;
+        cursor: pointer;
+        @extend .no_select;
+        &.no{
+            border-right:none;
+        }
+        &.on{
+            color: $color_logo;
+            background-color: $color_logo;
+            color: #fff;
+        }
+    }
+}
 .else_box {
     height: 640px;
     margin-top: 70px;

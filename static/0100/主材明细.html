@@ -111,6 +111,17 @@
                     <span>{{$v.name}}</span>
                     <i>{{$v.content}}</i>
                 </em>
+                {{if $v.pic.length>1}}
+
+                <div class="em-btns-body">
+                    <div class="em-btns">
+                        {{each $v.pic as $v1 i1}}
+                            <a class="{{if i1==0}}on{{/if}} {{if i1>=$v.pic.length-1}}no{{/if}}">{{i1 | han}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+
+                {{/if}}
                 <div class="swiper-container swiper1 swiper1{{i}}" data-num="{{i}}">
                     <div class="swiper-wrapper swiper1-body full">
                         {{each $v.pic as $v1 i1}}
@@ -160,6 +171,23 @@
         $(function() {
             template.helper('slice', function(obj) {
                 return obj.slice(0, -1)
+            })
+            template.helper('han', function(obj) {
+                if(obj==0){
+                    return '默认方案';
+                }else if(obj==1){
+                    return '替换方案一';
+                }else if(obj==2){
+                    return '替换方案二';
+                }else if(obj==3){
+                    return '替换方案三';
+                }else if(obj==4){
+                    return '替换方案四';
+                }else if(obj==5){
+                    return '替换方案五';
+                }else if(obj==6){
+                    return '替换方案六';
+                }
             })
             var data = {
                 "data": [
@@ -583,8 +611,9 @@
                             }
                         }
                     });
-                    $(obj).find('.titles').click(function() {
-                        swiper1.swipeNext();
+                    $(obj).find('.em-btns a').click(function() {
+                        $(this).addClass('on').siblings().removeClass('on');
+                        swiper1.swipeTo($(this).index());
                     })
                 }
 
