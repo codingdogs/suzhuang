@@ -420,7 +420,7 @@ $(function() {
     $('html,body').scrollTop($(window).scrollTop() + 1);
     $('input, textarea').placeholder();
     //弹层幻灯
-    (function() {
+    jiajuol.lightbox=function() {
         if ($('[data-viewsrc]').length > 0) {
             var view_flag=false;
             $('body').append('<div class="lightbox"><div class="bg"></div><i class="iconfont icon-close"></i><div class="lazy"><img src="http://icon.carimg.com//static/0200/blank.gif" /></div><p></p><i class="icons iconfont icon-right"></i><i class="iconfont icon-left icons"></i><span class="lightbox_num"></span></div>');
@@ -529,7 +529,7 @@ $(function() {
                 }
             });
         };
-    })();
+    };
     //选项卡
     (function(){
         var obj= $('.tabTit'),d=obj.data('event'),ev=d?d:"click";

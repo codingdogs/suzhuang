@@ -509,6 +509,7 @@ body.page-1-2 {
         }
     }
 }
+
 div.page-header {
     margin-top: 70px;
     position: relative;
@@ -569,9 +570,8 @@ div.page-header {
         }
     }
 }
+
 body.page-2 {
-
-
     .go-form {
         cursor: pointer;
     }
@@ -720,6 +720,7 @@ body.page-2 {
         position: relative;
         overflow: hidden;
         width: 100%;
+
         img {
             position: absolute;
             height: 100%;
@@ -733,10 +734,11 @@ body.page-2 {
             position: relative;
             z-index: 1;
             overflow: hidden;
+
             div.fonts {
-                margin:0 auto;
-                margin-top: 400px;
+                margin: 400px auto 0;
                 width: 1000px;
+
                 p {
                     float: left;
                     width: 33%;
@@ -940,82 +942,261 @@ body.page-2 {
         }
     }
 }
-body.page-3{
-    div.banner{
+
+body.page-3 {
+
+.else_box {
+    height: 640px;
+    margin-top: 70px;
+    overflow: hidden;
+
+    ul {
+        margin: 40px 0 0 165px;
+        width: 1200px;
+
+        li {
+            float: left;
+            margin-right: 190px;
+        }
+
+        a {
+            position: relative;
+            width: 340px;
+            height: 450px;
+            display: block;
+
+            &:hover {
+                .line {
+                    top: 9px;
+                    height: 410px;
+                }
+            }
+        }
+
+        .lazy {
+            width: 340px;
+            height: 430px;
+        }
+
+        .line {
+            border: solid 1px #fff;
+            width: 320px;
+            height: 418px;
+            left: 9px;
+            top: 30px;
+            position: absolute;
+            z-index: 10;
+            @include tran;
+        }
+    }
+}
+//
+
+    div.add_fonts {
+        background-color: #f3f3f3;
+
+        div.title {
+            background-color: #fff;
+            height: 50px;
+            line-height: 50px;
+            color: $red_1;
+
+            em {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        p {
+            padding-top: 25px;
+            padding-bottom: 50px;
+            color: #666;
+            font-size: 12px;
+
+            span {
+                color: #333;
+                font-size: 18px;
+            }
+
+            i {
+                color: #333;
+                font-size: 14px;
+            }
+        }
+    }
+
+    div.fixed-btns {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+
+        div.fixed-btns-body {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+
+            &.on {
+                position: fixed;
+                z-index: 100;
+            }
+
+            ul {
+                li {
+                    @include tran;
+                    text-align: center;
+                    height: 49px;
+                    line-height: 49px;
+                    border-bottom: 1px solid #fff;
+                    @extend .no_select;
+                    cursor: pointer;
+                    color: #666;
+                    font-size: 14px;
+                    float: left;
+
+                    &.on {
+                        border-color: $color_logo;
+                        color: $color_logo;
+                    }
+                }
+            }
+        }
+    }
+
+    div.banner {
         background-color: #050505;
         height: 800px;
         width: 100%;
         overflow: hidden;
         position: relative;
-        img{
+
+        img {
             position: absolute;
             height: 800px;
-            top:0;
-            margin-left:-800px;
-            left:50%;
+            top: 0;
+            margin-left: -800px;
+            left: 50%;
             width: 1600px;
         }
     }
-    div.pages{
+
+    div.pages {
         background-color: #f7f7f7;
         overflow: hidden;
         position: relative;
-        .swiper2{
+
+        em.titles {
+            padding-top: 36px;
+        }
+
+        .swiper2 {
             background-color: #fff;
         }
-        &.odd{
+
+        &.odd {
             background-color: #fff;
-            .swiper2{
+
+            .swiper2 {
                 background-color: #f7f7f7;
             }
         }
     }
-    div.swiper1{
+
+    div.swiper1 {
         width: 100%;
         height: 360px;
         overflow: hidden;
         margin: 30px auto;
-        div.left{
+
+        div.left {
             float: left;
             width: 516px;
             height: 360px;
         }
-        div.swiper2{
+
+        img {
+            display: none;
+        }
+
+        .on {
+            img {
+                display: block;
+            }
+        }
+
+        .swiper-slide-active {
+            img {
+                display: block;
+            }
+        }
+
+        div.swiper2 {
             float: right;
             width: 635px;
             height: 360px;
+            position: relative;
 
-            div.swiper-slide{
+            i.icons {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                background-color: #000;
+                background-color: rgba(0,0,0,0.4);
+                color: #fff;
+                font-size: 25px;
+                line-height: 40px;
+                z-index: 10;
+                right: 0;
+                top: 50%;
+                margin-top: -60px;
+                @extend .no_select;
+                cursor: pointer;
+
+                &.icon-left {
+                    left: 0;
+                }
+            }
+
+            div.swiper-slide {
                 width: 210px;
-                border-right:1px solid #fff;
+                border-right: 1px solid #fff;
                 height: 360px;
                 position: relative;
-                div.lazy{
+                box-sizing: border-box!important;
+
+                div.lazy {
                     width: 100%;
                     height: 275px;
                 }
-                div.fonts{
-                    position: absolute;
-                    bottom:10px;
-                    overflow: hidden;
-                    left:10px;
-                    right:10px;
-                    top:285px;
-                    em{
 
+                div.fonts {
+                    position: absolute;
+                    bottom: 0;
+                    overflow: hidden;
+                    left: 10px;
+                    right: 10px;
+                    top: 285px;
+
+                    em {
                         color: #333;
                         font-size: 14px;
                     }
-                    span{
+
+                    span {
                         display: block;
                         color: #666;
-                        font-size:12px;
+                        font-size: 12px;
                     }
                 }
             }
         }
     }
 }
+
 div.input input {
     @include tran;
 
